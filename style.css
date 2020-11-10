@@ -15,6 +15,7 @@ body{
     background-image: url("../img/front.jpg");
     background-repeat:no-repeat;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 
@@ -79,6 +80,7 @@ body{
     border-radius: 50%;
     height:100px;
     transition: transform 0.5s;
+    filter: grayscale(100%);
 }
 #portraitImg:hover{
     transform: scale(1.1,1.1);
@@ -159,7 +161,7 @@ a{
     display: flex;
     justify-content: space-between;
     text-align:left;
-    font-size:15px;
+    font-size:10px;
 }
 
 .left{
@@ -182,12 +184,47 @@ h2{
     animation: expandCircle;
     animation-fill-mode: forwards;
     animation-duration: 2s;
+    cursor:default;
 }
 
 .portraitFade{
     animation: portraitFadeOut;
     animation-fill-mode: forwards;
     animation-duration: 0.5s;
+}
+
+#aboutMe{
+    position: relative;
+    margin: 0;
+    background-color: white;
+    height:100vh;
+    z-index: 8;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#aboutMeImg{
+    max-width:80%;
+    max-height:450px;
+    height:auto;
+    width: auto;
+    margin-right:10%;
+    margin-left:10%;
+    margin-bottom:50px;
+}
+
+#aboutMeText{
+    padding:10px;
+    max-width:80%;
+    font-size: 13px;
+    margin-right:10%;
+    margin-left:10%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgb(33, 75, 135);
+    color:white;
 }
 
 @keyframes portraitFadeOut {
@@ -198,16 +235,16 @@ h2{
 @keyframes expandCircle {
     100% {left: 45%;
         top: 45%;
-        transform:scale(10,10);
+        transform:scale(15,15);
     };
 }
 
 @keyframes formFadeIn {
-    0%   {transform: translateX(-1000px);}
-    100% {transform: ""};
+    0%   {left:-100%}
+    100% {left: ""};
 }
 
 @keyframes formFadeOut {
-    0%   {transform: "";}
-    100% {transform: translateX(-1000px)};
+    0%   {left: ""}
+    100% {left:-100%;};
 }
