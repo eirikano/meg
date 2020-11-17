@@ -52,7 +52,7 @@ function onclick_form(form_type) {
     if (form_type == "CV") {
         blue_box.style.display = "flex"
         blue_box.style.animation = "formFadeIn"
-        blue_box.style.animationDuration = "1s"
+        blue_box.style.animationDuration = "0.5s"
         blue_box.style.transition = "1s"
         about_me.style.display = "none"
         portrait_box.classList.remove("expandCircle")
