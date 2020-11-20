@@ -38,5 +38,5 @@ function onclick_content(link) {
 blue_box_content[0].addEventListener("click", function () { onclick_content("edu"); })
 blue_box_content[1].addEventListener("click", function () { onclick_content("job"); })
 blue_box_content[2].addEventListener("click", function () { onclick_content("other"); })
-blue_box_content[3].addEventListener("click", function () { onclick_content("courses"); })
-blue_box_content[4].addEventListener("click", function () { onclick_content("skills"); })
+// blue_box_content[3].addEventListener("click", function () { onclick_content("courses"); })
+blue_box_content[3].addEventListener("click", function () { onclick_content("skills"); })

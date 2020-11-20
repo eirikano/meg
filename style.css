@@ -44,7 +44,6 @@ body{
 #blueBox, #blueBoxInner{
     position: fixed;
     width:200px;
-    min-height:100vh;
     background-color: rgb(19, 45, 81);
     display:none;
     top:25px;
@@ -53,20 +52,21 @@ body{
 #blueBox{
     left:100px;
     z-index: 2;
-
+    height:100vh;
 }
 
 #blueBoxInner{
-    box-sizing: border-box;
     background-color: rgb(33, 75, 135);
     left:300px;
+    top:25px;
+    padding-left: 12%;
+    padding-right:12%;
+    padding-bottom:5%;
     width:calc(100% - 400px);
-    max-height: 100vh;
+    height:calc(100vh - 75px);
     z-index: 1;
     display:none;
-    padding-left: 10%;
-    padding-right:10%;
-    padding-bottom:100px;
+    
     overflow-y: auto;
 }
 
@@ -100,7 +100,7 @@ body{
     z-index: 10;
     position: fixed;
     left:0;
-    bottom:0vh;
+    bottom:0;
     background-color: rgba(255, 255, 255, 1);
     width:100%;
     height:50px;   
@@ -150,9 +150,11 @@ a{
 }
 
 .innerContent{
+    position: relative;
     color:white;
-    padding:25px;
     width:100%;
+    min-height:100%;
+    top:0px;
 }
 
 .whiteLine{
@@ -170,15 +172,6 @@ a{
     font-size:12px;
 }
 
-.left{
-    width:40ch;
-}
-
-.right{
-    width:40ch;
-    color:rgb(189, 189, 189);
-    text-align:right;
-}
 h1{
     font-size:35px;
 }
@@ -224,13 +217,13 @@ h2{
 }
 
 #aboutMeText{
-    padding:10px;
+    padding:15px;
     font-size: 13px;
     z-index: 7;
     width:100%;
     min-width:400px;
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     background-color: rgb(33, 75, 135);
     color:white;
