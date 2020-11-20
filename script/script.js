@@ -50,14 +50,33 @@ function onclick_form(form_type) {
     // var body_element = document.getElementsByTagName("body")[0]
 
     if (form_type == "CV") {
-        blue_box.style.display = "flex"
-        blue_box.style.animation = "formFadeIn"
-        blue_box.style.animationDuration = "0.5s"
-        blue_box.style.transition = "1s"
-        about_me.style.display = "none"
-        portrait_box.classList.remove("expandCircle")
-        portrait_img.classList.remove("portraitFade")
-        portrait_box.style.display = "flex"
+        if (blue_box.style.display == "flex") {
+            blue_box.style.animation = "formFadeOut"
+            blue_box.style.animationDuration = "1s"
+            blue_box.style.transition = "1s"
+
+            blue_box_inner.style.animation = "formFadeOut"
+            blue_box_inner.style.animationDuration = "1s"
+            blue_box_inner.style.transition = "1s"
+            about_me.style.display = "none"
+            portrait_box.style.display = "flex"
+            portrait_box.classList.remove("expandCircle")
+            portrait_img.classList.remove("portraitFade")
+            setTimeout(function () {
+                blue_box.style.display = "none"
+                blue_box_inner.style.display = "none"
+            }, 950);
+        }
+        else {
+            blue_box.style.display = "flex"
+            blue_box.style.animation = "formFadeIn"
+            blue_box.style.animationDuration = "0.5s"
+            blue_box.style.transition = "1s"
+            about_me.style.display = "none"
+            portrait_box.classList.remove("expandCircle")
+            portrait_img.classList.remove("portraitFade")
+            portrait_box.style.display = "flex"
+        }
     }
     else if (form_type == "Front") {
         blue_box.style.animation = "formFadeOut"
@@ -82,6 +101,6 @@ function onclick_form(form_type) {
 }
 
 
-link_box[0].addEventListener("click", function () { onclick_form("Front"); })
-link_box[1].addEventListener("click", function () { onclick_form("CV"); })
+link_box[1].addEventListener("click", function () { onclick_form("Front"); })
+link_box[0].addEventListener("click", function () { onclick_form("CV"); })
 // link_box[2].addEventListener("click", function () { onclick_form("Other"); })
