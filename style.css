@@ -304,4 +304,21 @@ h2{
         transform:scale(0.8,0.8);
         left:calc(10% - 65px);
     }
+    #aboutMe{
+        padding-left:5%;
+        padding-right:5%;
+    }
+    #aboutMeText{
+        padding:15px;
+        font-size: 12px;
+        z-index: 7;
+        width:100%;
+        min-width:80%;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: rgb(33, 75, 135);
+        color:white;
+    }
+    
   }
