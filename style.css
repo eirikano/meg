@@ -17,7 +17,10 @@ body{
     min-height: 100vh;
 }
 
-
+.left{
+    width:75vw;
+    padding-right:5vw;
+}
 #leftFrame, #rightFrame{
     z-index: 4;
     position: fixed;
@@ -276,9 +279,6 @@ h2{
         z-index: 2;
         height:calc(100vh - 175px);
         padding:5%;
-    }
-    .left{
-        padding-right:20px;
     }
     #blueBox{
         left:10%;
