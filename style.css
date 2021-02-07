@@ -59,8 +59,8 @@ body{
     background-color: rgb(33, 75, 135);
     left:calc(10% + 200px);
     top:50px;
-    padding-left: 12%;
-    padding-right:12%;
+    padding-left: 8%;
+    padding-right:8%;
     padding-bottom:5%;
     width:calc(80% - 200px);
     display:none;
@@ -171,7 +171,7 @@ a{
 }
 
 .left{
-    width:50vw;
+    max-width:45vw;
     padding-right:5vw;
 }
 
@@ -319,6 +319,9 @@ h2{
     }
     #aboutMeText{
         min-width:80%;
+    }
+    .post{
+        font-size:14px;
     }
     
   }
