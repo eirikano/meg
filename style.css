@@ -275,8 +275,8 @@ h2{
 
 @media screen and (max-width: 800px) {
     #blueBoxInner{
-        left:10%;
-        width:calc(80%);
+        left:5%;
+        width:calc(90%);
         z-index: 2;
         height:calc(100vh - 175px);
         padding:5%;
@@ -286,10 +286,10 @@ h2{
         padding-right:5vw;
     }
     #blueBox{
-        left:10%;
+        left:5%;
         top:auto;
         bottom:50px;
-        width:80%;
+        width:90%;
         height:75px;
         display: flex;
         justify-content: center;
@@ -321,6 +321,10 @@ h2{
     }
     .post{
         font-size:14px;
+    }
+
+    #leftFrame, #rightFrame{
+        width:5%;
     }
     
   }
